@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+Hey there!! I am a sophomore majoring in Computer Science & Mathematics at Mount Holyoke College
+
+```{r}
+1 + 1
+```
