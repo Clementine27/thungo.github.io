@@ -2,10 +2,17 @@
 title: "Welcome to my homepage!"
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Hey there!! I am a rising junior majoring in Computer Science & Mathematics at Mount Holyoke College. I am interested in creating tech products that can be used for the public good, which is exactly why I am also pursuing a Nexus in Law, Public Policy and Human Rights. 
 
-```{r}
-1 + 1
-```
+# Research 
+
+I am currently working in 2 labs!! 
+
+## Small Steps @MHC
+
+## LASER @UMass Amherst 
+
+
+# Projects 
+
