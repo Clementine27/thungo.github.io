@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Welcome to my homepage!",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Hey there!! I am a rising junior majoring in Computer Science & Mathematics at Mount Holyoke College. I am interested in creating tech products that can be used for the public good, which is exactly why I am also pursuing a Nexus in Law, Public Policy and Human Rights."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hey there!! I am a sophomore majoring in Computer Science & Mathematics at Mount Holyoke College\n\n1 + 1\n\n[1] 2"
+    "text": "Hey there!! I am a sophomore majoring in Computer Science & Mathematics at Mount Holyoke College. I am also pursuing a"
   },
   {
     "objectID": "STAT 244 Homework 1.html",
@@ -40,5 +40,26 @@
     "title": "Assignment 1",
     "section": "MC Simulation: Estimating the Area of a Region",
     "text": "MC Simulation: Estimating the Area of a Region\n\nVocabulary\n\nEvery time you generate random numbers (according to some probability model/distribution), this is called sampling from the distribution.\n\nFor example,\n\nwhen we run rnorm(1, mean = 0, sd = 1) we are sampling once from the standard normal distribution; i.e., sampling values from \\(X \\sim \\mathcal{N}(0,1)\\);\nwhen we run runif(n, a, b) we are sampling \\(n\\) times uniformly at random from the interval \\((a,b)\\); i.e., sampling values of \\(X \\sim U(a,b)\\); this means that \\(X\\) is equally likely to equal any value on the continuum between \\(a\\) and \\(b\\).\n\n\n\n\n\n\n\nExercise 4\n\n\n\n\n\nFill in the code below to sample points within the box \\([-1, 1] \\times [-1, 1]\\) uniformly at random. Hint. Look at your NotesDay3.qmd file (which you submitted on Moodle under Intro to Quarto Lab).\n\n# To make this code reproducible (same random number generated each time)\nset.seed(111)\n# Number of times to sample a point from the [-1,1] x [-1, 1] box\nnum_points = 10000\n\n# Sample x and y from the range [-1,1] uniformly at random\n# 100000 times\n\nx &lt;- runif(num_points, -1,1)\ny &lt;- runif(num_points, -1,1)\n  \n\n# The cbind() function takes two lists (of equal length) and puts them\n# into a table, where each list is a column of that table. The c stands\n# for \"column\" \ngenerated_data &lt;- data.frame(cbind(x, y))\n\n\n\n\nNow, when applied to a list of booleans (i.e., TRUE/FALSE values), the sum function will add up the number of TRUE values in the list. We can try this out below:\n\nlist_of_booleans = c(TRUE, FALSE, FALSE, TRUE, FALSE)\nsum(list_of_booleans)\n\n[1] 2\n\n\n\n\n\n\n\n\nExercise 5\n\n\n\n\n\nFill in the code below to estimate the value of \\(\\pi\\) according to this MC simulation using:\n\nthe sum function\nyour check_if_in_circle function\nx, y, and num_points from two code chunks above\nthe fact that the circle area = \\(\\pi\\cdot r^2\\) = \\(\\pi\\) for the unit circle.\n\nPlease try to figure this out without using external resources; otherwise, it ruins your chance to problem-solve! I am happy to help guide you – just ask!\n\nnum_pts_inside = sum(check_if_in_circle(x,y))\n\npi_estimate = 4*num_pts_inside/num_points\nprint(num_pts_inside)\n\n[1] 7831\n\n\n\n\n\nIf successful, we can use our function return_color from before to visualize the process of marking whether points are included/excluded from the unit circle while displaying the corresponding pi_estimate. You should not need to modify the code in the chunk below.\n\n# Plot the points\nggplot(data = generated_data, \n       mapping = aes(x, y, col = return_color(x, y))) + \ngeom_point() + \nggtitle(paste(\"Estimated value of pi:\", pi_estimate)) +\ntheme(legend.position=\"none\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercise 6\n\n\n\n\n\nEstimate \\(\\pi\\) based instead on the upper right quarter of the unit circle rather than the whole circle. That is, sample uniformly at random in the box \\([0,1] \\times [0,1]\\) and consider when points land in the corresponding quarter of the unit circle centered at \\((0,0)\\).\nHints.\n\nInstead of check_if_in_circle, you will need a similar function that checks for whether input points fall in the upper right quadrant of the unit circle.\nYou will need to change how the runif function is called to select x and y.\nYour final calculation of pi_estimate might change slightly. (Do you still multiply by 4? Why?)\n\n\nset.seed(123)\n# Number of times to sample a point from the [0,1] x [0,1] box\nnum_points = 10000\n\n# YOUR CODE HERE \nx &lt;- runif(num_points,0 ,1)\ny &lt;- runif(num_points,0,1)\n\npointsIn = sum(check_if_in_circle(x,y)) \n# technically, we can still reuse the function from before because the range of numbers that x ,y takes guarantees that points only populates the first quad, so we only need to check if it falls within the circle or not, which the old function obviously does \n\nnew_pi_estimate = 4 *pointsIn/num_points  # we're still x4 because the area we have is only 1/4 of the area of the circle \n\nAfter completing your code, include a visualization (like the one from the previous exercise) that displays how your algorithm is sampling and the \\(\\pi\\) estimate corresponding to that sampling.\n\n# CODE FOR VISUALAIZATION HERE \ngenerated_data &lt;- data.frame(cbind(x, y))\n\nggplot(data = generated_data, \n       mapping = aes(x, y, col = return_color(x, y))) + \ngeom_point() + \nggtitle(paste(\"Estimated value of pi:\", pi_estimate)) +\ntheme(legend.position=\"none\")"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "Heyyy this is a test"
+  },
+  {
+    "objectID": "index.html#small-steps-mhc",
+    "href": "index.html#small-steps-mhc",
+    "title": "Welcome to my homepage!",
+    "section": "Small Steps @MHC",
+    "text": "Small Steps @MHC"
+  },
+  {
+    "objectID": "index.html#laser-umass-amherst",
+    "href": "index.html#laser-umass-amherst",
+    "title": "Welcome to my homepage!",
+    "section": "LASER @UMass Amherst",
+    "text": "LASER @UMass Amherst"
   }
 ]
