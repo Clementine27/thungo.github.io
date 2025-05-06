@@ -2,4 +2,14 @@
 title: "Research"
 ---
 
-Heyyy this is a test
+I am currently working in 2 labs!! 
+
+## Small Steps @MHC {.tabset}
+
+I am under the guidance of professor [He who shall not be namedropped just yet or at least until I have received his consent] 
+
+
+## LASER @UMass Amherst {.tabset}
+
+I am under the guidance of professor [She who shall not be namedropped just yet or at least until I have received her consent] 
+

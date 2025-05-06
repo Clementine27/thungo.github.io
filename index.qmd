@@ -1,18 +1,42 @@
 ---
 title: "Welcome to my homepage!"
+execute:
+  echo: false
+  warning: false
 ---
 
 
 Hey there!! I am a rising junior majoring in Computer Science & Mathematics at Mount Holyoke College. I am interested in creating tech products that can be used for the public good, which is exactly why I am also pursuing a Nexus in Law, Public Policy and Human Rights. 
 
-# Research 
 
-I am currently working in 2 labs!! 
-
-## Small Steps @MHC
-
-## LASER @UMass Amherst 
+I am currently exploring Computer Science research, specifically, those that fall under Human-Computer Interactions as well as the application of Computer Science in other fields as a data exploration research tool
 
 
-# Projects 
+```{r}
+#| label: fig-plot
+#| include: TRUE
+#| echo: FALSE
+#| eval: TRUE
+#| warning: FALSE
+#| message: TRUE
+#| fig.width: 3
+#| fig.height: 4
+#| fig-align: "center"
+#| text-align: "center"
+#| fig.cap: "This is me and my friend at Diwali!"
+
+library(magick)
+library(magrittr)
+
+# save image as ggplot
+plot <- image_read("photo.jpg") %>% 
+  image_ggplot(interpolate = TRUE)
+
+plot
+```
+
+
+If you want to contact me, please feel free to connect with me via [LinkedIn](https://www.linkedin.com/in/thu-ngo-719071295/) 
+
+
 

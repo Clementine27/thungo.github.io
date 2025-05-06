@@ -1,0 +1,37 @@
+---
+title: "STAT 244-SC"
+---
+
+In my Computational Statistics course, I learned to use some neat 'machine learning' algorithms and got the chance to practice them in a final project in a team of three. Our team decided to explore the well-known Breast Cancer (Wisconsin) data set, which details information about various breast masses with 1 variable for diagnosis of whether or not a breast mass is cancerous or malignant and various other numeric variables which further specify the characteristics of the breast mass itself.
+
+
+In our exploration, we used 3 techniques: Cross-Validation, the classic logistic regression, and K-Means Clustering. Rather than offering mutually exclusive insights, they each act as a supporting reference for the other two's results, which is particularly true with the last 2 methods. The K-Means plots we arrived at showed us the clear divide between malignant and benign tumor's in their measurements of a few explanatory variables of interest.
+
+
+For example, there were clear differences between texture_mean and radius_mean measurements between benign and malignant tumors as shown in the plot below. This confirmed our suspicion that these two would be good explanatory variables for predicting diagnosis when we were creating the logistics regression model. 
+
+```{r}
+#| echo: FALSE
+#| eval: TRUE
+#| warning: FALSE
+#| message: FALSE
+library(dplyr)
+library(ggplot2)
+library(Sleuth3)
+library(tidyverse)
+breastcancer <- read.csv("data 2.csv")
+breastcancer <- breastcancer %>% 
+  filter(!is.na(breastcancer$radius_mean) & !is.na(breastcancer$texture_mean))
+data_reduced <- breastcancer %>% select(radius_mean, texture_mean)
+
+set.seed(244)
+# Run the K-means algorithm
+kmeans_2_round_1 <- kmeans(scale(data_reduced), centers = 2)
+# Plot the cluster assignments
+data_reduced %>% mutate(kmeans_cluster = as.factor(kmeans_2_round_1$cluster)) %>%
+ggplot(aes(x = radius_mean, y = texture_mean , color = kmeans_cluster))+
+geom_point(size = 3) +
+theme(legend.position = "none") +
+labs(title = "K-means with K = 2 (round 1)") +
+theme_minimal()
+```

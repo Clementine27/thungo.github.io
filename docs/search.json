@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Welcome to my homepage!",
     "section": "",
-    "text": "Hey there!! I am a rising junior majoring in Computer Science & Mathematics at Mount Holyoke College. I am interested in creating tech products that can be used for the public good, which is exactly why I am also pursuing a Nexus in Law, Public Policy and Human Rights."
+    "text": "Hey there!! I am a rising junior majoring in Computer Science & Mathematics at Mount Holyoke College. I am interested in creating tech products that can be used for the public good, which is exactly why I am also pursuing a Nexus in Law, Public Policy and Human Rights.\nI am currently exploring Computer Science research, specifically, those that fall under Human-Computer Interactions as well as the application of Computer Science in other fields as a data exploration research tool\n\n\n\n\n\n\n\n\nFigure 1: This is me and my friend at Diwali!\n\n\n\n\n\nIf you want to contact me, please feel free to connect with me via LinkedIn"
   },
   {
     "objectID": "about.html",
@@ -46,14 +46,14 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "Heyyy this is a test"
+    "text": "I am currently working in 2 labs!!"
   },
   {
     "objectID": "index.html#small-steps-mhc",
     "href": "index.html#small-steps-mhc",
     "title": "Welcome to my homepage!",
     "section": "Small Steps @MHC",
-    "text": "Small Steps @MHC"
+    "text": "Small Steps @MHC\nI am under the guidance of professor [He who I don’t want to namedrop just yet] ## LASER @UMass Amherst {.tabset}\nI am under the guidance of professor [She who I don’t want to namedrop just yet either]"
   },
   {
     "objectID": "index.html#laser-umass-amherst",
@@ -61,5 +61,47 @@
     "title": "Welcome to my homepage!",
     "section": "LASER @UMass Amherst",
     "text": "LASER @UMass Amherst"
+  },
+  {
+    "objectID": "index.html#pioneer-valley",
+    "href": "index.html#pioneer-valley",
+    "title": "Welcome to my homepage!",
+    "section": "Pioneer Valley",
+    "text": "Pioneer Valley"
+  },
+  {
+    "objectID": "index.html#crim",
+    "href": "index.html#crim",
+    "title": "Welcome to my homepage!",
+    "section": "CRIM",
+    "text": "CRIM"
+  },
+  {
+    "objectID": "index.html#p",
+    "href": "index.html#p",
+    "title": "Welcome to my homepage!",
+    "section": "P",
+    "text": "P"
+  },
+  {
+    "objectID": "research.html#small-steps-mhc",
+    "href": "research.html#small-steps-mhc",
+    "title": "Research",
+    "section": "Small Steps @MHC",
+    "text": "Small Steps @MHC\nI am under the guidance of professor [He who shall not be namedropped just yet or at least until I have received his consent]"
+  },
+  {
+    "objectID": "research.html#laser-umass-amherst",
+    "href": "research.html#laser-umass-amherst",
+    "title": "Research",
+    "section": "LASER @UMass Amherst",
+    "text": "LASER @UMass Amherst\nI am under the guidance of professor [She who shall not be namedropped just yet or at least until I have received her consent]"
+  },
+  {
+    "objectID": "STAT_244-SC.html",
+    "href": "STAT_244-SC.html",
+    "title": "STAT 244-SC",
+    "section": "",
+    "text": "In my Computational Statistics course, I learned to use some neat ‘machine learning’ algorithms and got the chance to practice them in a final project in a team of three. Our team decided to explore the well-known Breast Cancer (Wisconsin) data set, which details information about various breast masses with 1 variable for diagnosis of whether or not a breast mass is cancerous or malignant and various other numeric variables which further specify the characteristics of the breast mass itself.\nIn our exploration, we used 3 techniques: Cross-Validation, the classic logistic regression, and K-Means Clustering. Rather than offering mutually exclusive insights, they each act as a supporting reference for the other two’s results, which is particularly true with the last 2 methods. The K-Means plots we arrived at showed us the clear divide between malignant and benign tumor’s in their measurements of a few explanatory variables of interest.\nFor example, there were clear differences between texture_mean and radius_mean measurements between benign and malignant tumors as shown in the plot below. This confirmed our suspicion that these two would be good explanatory variables for predicting diagnosis when we were creating the logistics regression model."
   }
 ]

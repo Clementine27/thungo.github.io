@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research – Thu Ngo</title>
+<title>STAT 244-SC – Thu Ngo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,11 +95,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research.html" aria-current="page"> 
+    <a class="nav-link" href="./research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./STAT_244-SC.html"> 
+    <a class="nav-link active" href="./STAT_244-SC.html" aria-current="page"> 
 <span class="menu-text">STAT 244-SC</span></a>
   </li>  
 </ul>
@@ -114,22 +114,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#small-steps-mhc" id="toc-small-steps-mhc" class="nav-link active" data-scroll-target="#small-steps-mhc">Small Steps <span class="citation" data-cites="MHC">@MHC</span></a></li>
-  <li><a href="#laser-umass-amherst" id="toc-laser-umass-amherst" class="nav-link" data-scroll-target="#laser-umass-amherst">LASER <span class="citation" data-cites="UMass">@UMass</span> Amherst</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research</h1>
+<h1 class="title">STAT 244-SC</h1>
 </div>
 
 
@@ -146,17 +139,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I am currently working in 2 labs!!</p>
-<section id="small-steps-mhc" class="level2 tabset">
-<h2 class="tabset anchored" data-anchor-id="small-steps-mhc">Small Steps <span class="citation" data-cites="MHC">@MHC</span></h2>
-<p>I am under the guidance of professor [He who shall not be namedropped just yet or at least until I have received his consent]</p>
-</section>
-<section id="laser-umass-amherst" class="level2 tabset">
-<h2 class="tabset anchored" data-anchor-id="laser-umass-amherst">LASER <span class="citation" data-cites="UMass">@UMass</span> Amherst</h2>
-<p>I am under the guidance of professor [She who shall not be namedropped just yet or at least until I have received her consent]</p>
+<p>In my Computational Statistics course, I learned to use some neat ‘machine learning’ algorithms and got the chance to practice them in a final project in a team of three. Our team decided to explore the well-known Breast Cancer (Wisconsin) data set, which details information about various breast masses with 1 variable for diagnosis of whether or not a breast mass is cancerous or malignant and various other numeric variables which further specify the characteristics of the breast mass itself.</p>
+<p>In our exploration, we used 3 techniques: Cross-Validation, the classic logistic regression, and K-Means Clustering. Rather than offering mutually exclusive insights, they each act as a supporting reference for the other two’s results, which is particularly true with the last 2 methods. The K-Means plots we arrived at showed us the clear divide between malignant and benign tumor’s in their measurements of a few explanatory variables of interest.</p>
+<p>For example, there were clear differences between texture_mean and radius_mean measurements between benign and malignant tumors as shown in the plot below. This confirmed our suspicion that these two would be good explanatory variables for predicting diagnosis when we were creating the logistics regression model.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="STAT_244-SC_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

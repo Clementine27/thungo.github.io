@@ -7,14 +7,19 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
-      - href: Research.qmd
+        text: About
+      - href: research.qmd
         text: Research
+      - href: STAT_244-SC.qmd
+        text: "STAT 244-SC"
 
 format:
   html:
-    theme: cosmo
+    respect-user-color-scheme: true
+    theme: 
+      light: flatly
+      dark: darkly
+      
     css: styles.css
     toc: true
 
