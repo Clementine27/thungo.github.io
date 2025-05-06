@@ -5,7 +5,6 @@ execute:
   warning: false
 ---
 
-
 Hey there!! I am a rising junior majoring in Computer Science & Mathematics at Mount Holyoke College. I am interested in creating tech products that can be used for the public good, which is exactly why I am also pursuing a Nexus in Law, Public Policy and Human Rights. 
 
 
