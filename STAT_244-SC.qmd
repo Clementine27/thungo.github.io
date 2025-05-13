@@ -4,11 +4,9 @@ title: "STAT 244-SC"
 
 In my Computational Statistics course, I learned to use some neat 'machine learning' algorithms and got the chance to practice them in a final project in a team of three. Our team decided to explore the well-known Breast Cancer (Wisconsin) data set, which details information about various breast masses with 1 variable for diagnosis of whether or not a breast mass is cancerous or malignant and various other numeric variables which further specify the characteristics of the breast mass itself.
 
-
 In our exploration, we used 3 techniques: Cross-Validation, the classic logistic regression, and K-Means Clustering. Rather than offering mutually exclusive insights, they each act as a supporting reference for the other two's results, which is particularly true with the last 2 methods. The K-Means plots we arrived at showed us the clear divide between malignant and benign tumor's in their measurements of a few explanatory variables of interest.
 
-
-For example, there were clear differences between texture_mean and radius_mean measurements between benign and malignant tumors as shown in the plot below. This confirmed our suspicion that these two would be good explanatory variables for predicting diagnosis when we were creating the logistics regression model. 
+For example, there were clear differences between texture_mean and radius_mean measurements between benign and malignant tumors as shown in the plot below. This confirmed our suspicion that these two would be good explanatory variables for predicting diagnosis when we were creating the logistics regression model.
 
 ```{r}
 #| echo: FALSE
@@ -19,6 +17,8 @@ library(dplyr)
 library(ggplot2)
 library(Sleuth3)
 library(tidyverse)
+library(tidymodels)
+library(readxl)
 breastcancer <- read.csv("data 2.csv")
 breastcancer <- breastcancer %>% 
   filter(!is.na(breastcancer$radius_mean) & !is.na(breastcancer$texture_mean))
@@ -34,4 +34,42 @@ geom_point(size = 3) +
 theme(legend.position = "none") +
 labs(title = "K-means with K = 2 (round 1)") +
 theme_minimal()
+```
+
+The following present some of our predictor models
+
+```{r}
+#| echo: FALSE
+#| eval: TRUE
+#| warning: FALSE
+#| message: FALSE
+lm_spec <- linear_reg() %>% set_mode('regression') %>% set_engine('lm')
+
+cancer_model<-lm_spec %>% 
+  fit(perimeter_mean ~ concavity_mean, data = breastcancer)
+
+cancer_model <- ggplot(breastcancer, aes(x = concavity_mean, y = perimeter_mean)) + geom_point()
+
+cancer_model
+```
+
+```{r}
+#| echo: FALSE
+#| eval: TRUE
+#| warning: FALSE
+#| message: FALSE
+# Model_2: 2 predictors (Y = b0 + b1 X + b2 X^2)
+cancer_model + geom_smooth(method = "lm", se = FALSE, formula = y ~ poly(x, 2))
+```
+
+
+```{r}
+#| echo: FALSE
+#| eval: TRUE
+#| warning: FALSE
+#| message: FALSE
+
+# Model_3: 10 predictors (Y = b0 + b1 X + b2 X^2 + ... + b10 X^10)
+cancer_model + geom_smooth(method = "lm", se = FALSE, formula = y ~ poly(x, 10))
+
 ```
